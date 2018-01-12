@@ -1,9 +1,4 @@
 node {
-    stage 'ブランチ最新化'
-    sh "cd ../${jobname}@script && git pull origin $GITHUB_BRANCH_PARAM"
-
-    stage '終了作業・GITクリア'
-    sh "cd ../${jobname}@script && git clean -fdx"
     echo "finish"
 }
 
