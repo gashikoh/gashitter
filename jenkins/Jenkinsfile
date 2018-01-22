@@ -1,4 +1,15 @@
 node {
+    stage '初期設定'
+    def jobname = 'Waikiki-Development-Deploy-Pipeline'
+
+    stage 'ブランチ最新化'
+    sh "cd ../${jobname}@script && git pull origin master"
+
+    stage 'デプロイ実行'
+    sh "cd ../${jobname}@script/jenkins/capistrano && cap production deploy"
+
+    stage '終了作業・GITクリア'
+    sh "cd ../${jobname}@script && git clean -fdx"
+
     echo "finish"
 }
-
