@@ -6,6 +6,7 @@ node {
     sh "cd ../${jobname}@script && git pull origin master"
 
     stage 'デプロイ実行'
+    sh whoami
     sh "cd ../${jobname}@script/jenkins/capistrano && cap production deploy"
 
     stage '終了作業・GITクリア'
