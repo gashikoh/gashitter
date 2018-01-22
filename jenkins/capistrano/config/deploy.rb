@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.6.1'
+lock '3.10.1'
 
 set :application, 'intern'
 set :repo_url, 'git@github.com:ozvit/web.git'
@@ -45,7 +45,7 @@ set :keep_releases, 5
 
 task :grant do
   on roles(:app) do
-    execute :chmod, "775 -R /home/deploy/repository/web_git/current"
+    execute :chmod, "775 -R /home/deploy/web_git/current"
   end
 end
 
