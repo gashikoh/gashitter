@@ -1,6 +1,6 @@
 node {
     stage '初期設定'
-    def jobname = 'test'
+    def jobname = 'prod'
 
     stage 'ブランチ最新化'
     sh "cd ../${jobname}@script && git pull origin master"
