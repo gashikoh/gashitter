@@ -49,6 +49,12 @@ task :grant do
   end
 end
 
+task :rsync do
+  on roles(:app) do
+    execute "rsync -r -l -p -g -o -D -v --no-g --delete /home/deploy/web_git/current/web /var/www/web/web"
+  end
+end
+
 namespace :deploy do
 
   desc 'Localize application'
@@ -63,6 +69,7 @@ namespace :deploy do
   task :activate do
     on roles(:app), in: :sequence, wait: 5 do
       invoke "grant"
+      invoke "rsync"
     end
   end
 
