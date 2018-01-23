@@ -51,7 +51,7 @@ end
 
 task :rsync do
   on roles(:app) do
-    execute "rsync -r -l -p -g -o -D -v --no-g --delete /home/deploy/web_git/current/web /var/www/web/web"
+    execute "rsync -r -l -p -g -o -D -v --no-g --delete /home/deploy/web_git/current/web /var/www/web"
   end
 end
 
