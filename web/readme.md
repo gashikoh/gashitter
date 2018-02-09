@@ -36,12 +36,12 @@ Insert this at the bottom of xampp/apache/conf/extra/httpd-vhosts.conf
 ```
 <VirtualHost *:80>
   ServerName habitis.com
-  DocumentRoot “<CODE PATH>/public”
+  DocumentRoot "<CODE PATH>/public"
 
   CustomLog <CODE PATH>/habitis-access.log combined
   ErrorLog <CODE PATH>/habitis-error.log
 
-  <Directory “<CODE PATH>/public”>
+  <Directory "<CODE PATH>/public">
       Options FollowSymLinks
       Require all granted
       AllowOverride All  
