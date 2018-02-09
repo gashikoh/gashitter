@@ -64,8 +64,11 @@ Restart XAMPP => Environment is up
 ```
 
 **4. Install Composer**
+access link →  https://getcomposer.org
 
-https://getcomposer.org/Composer-Setup.exe 
+push `Download`
+
+push `Composer-Setup.exe` link
 
 **5. Open Terminal in the source path**
 
