@@ -1,0 +1,47 @@
+.brand-tile-wrapper {
+  font-size: 0;
+  .brand-tile {
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    width: 50%;
+  }
+}
+
+.brand-image {
+  padding: .3em;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+    opacity: .85;
+  }
+}
+
+.brand-ticker {
+  background-color: hsla(0, 0%, 100%, 0.8);
+  color: #ff4e4e;
+  font-size: .7em;
+  left: 1.7em;
+  padding: .2em 1.5em;
+  position: absolute;
+  text-align: center;
+  top: 1em;
+}
+
+.ui-widget-brand {
+  &.preview {
+    margin: 1em auto;
+  }
+  .see-more {
+    background-color: #f2f4f5;
+    border: 0;
+    border-top: 1px solid #e2e3e7;
+    color: #f24336;
+    cursor: pointer;
+    font-size: .9em;
+    font-weight: 700;
+    margin: 0;
+    padding: .5em 0;
+    text-align: center;
+  }
+}
