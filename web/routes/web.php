@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'PageController@home');
-
-Route::get('/mypage', 'PageController@mypage');
-
-Route::get('/welcome', 'PageController@welcome');
+Route::get('/', function () {
+    return view('chat');
+});
